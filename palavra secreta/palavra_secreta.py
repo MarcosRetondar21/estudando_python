@@ -1,11 +1,16 @@
 #jogo palavra secreta
+
 import os
-palavra_secreta ='ballet'
+
+palavra_secreta = input('Digite uma palabra secreta para começar a bricadeira: ').lower()
+
+os.system('cls')
+print('Jogo Palavra Secreta\nTente adivinhar a palabra digitando uma letra de cada vez\n')
 letras_acertadas = ''
 numero_tentativas = 0
 while True:
     
-    letra_digitada = input('Digite uma letra: ')
+    letra_digitada = input('Digite uma letra: ').lower()
     numero_tentativas += 1
     
     if len(letra_digitada) > 1:
@@ -36,6 +41,7 @@ while True:
         
         print('Número de tentativas: ', numero_tentativas)
         break
+    
 
 
 
